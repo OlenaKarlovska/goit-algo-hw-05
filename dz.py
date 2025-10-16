@@ -93,15 +93,16 @@ def measure_algorithms(text, pattern):
     return results
 
 # Bикористання
-def read_file(filename):
-    with open(filename, 'r', encoding='UTF-8') as f:
+def read_file(filename, code='UTF-8'):
+    with open(filename, 'r', code) as f:
         return f.read()
 
 if __name__ == "__main__":
     # Завантаження текстів з файлів
-    text1 = read_file("statia1.txt")
+    text1 = read_file(r"C:\Users\Rui\Desktop\Basic Algorithms and Data Structures\tema5\statia1.txt", code="cp1251")
     print(text1)
-    text2= read_file("statia2.txt")
+    text2 = read_file(r"C:\Users\Rui\Desktop\Basic Algorithms and Data Structures\tema5\statia2.txt", code = "utf-8-sig")
+    print(text2)
     print(text2)
 
     existing_substring = "наука"
@@ -118,3 +119,4 @@ if __name__ == "__main__":
     print(measure_algorithms(text2, existing_substring))
     print("Вигаданий підрядок:")
     print(measure_algorithms(text2, non_existing_substring))
+
