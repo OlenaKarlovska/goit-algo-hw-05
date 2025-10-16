@@ -94,7 +94,7 @@ def measure_algorithms(text, pattern):
 
 # Bикористання
 def read_file(filename, code='UTF-8'):
-    with open(filename, 'r', code) as f:
+    with open(filename, 'r', encoding=code) as f:
         return f.read()
 
 if __name__ == "__main__":
@@ -119,4 +119,5 @@ if __name__ == "__main__":
     print(measure_algorithms(text2, existing_substring))
     print("Вигаданий підрядок:")
     print(measure_algorithms(text2, non_existing_substring))
+
 
